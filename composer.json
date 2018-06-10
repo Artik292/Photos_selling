@@ -1,12 +1,14 @@
 {
+      "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "":"src/"
         }
     },
   "require":{
-    "atk4/ui": "*",
-        "twilio/sdk": "^5.15",
-        "atk4/filestore": "*"
+    "atk4/ui": "*, dev-develop",
+
+        "h4cc/wkhtmltopdf-i386": "*",
+            "atk4/filestore": "dev-master"
   }
 }
