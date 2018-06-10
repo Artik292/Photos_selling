@@ -8,7 +8,7 @@ use League\Flysystem\Adapter\Local;
 
 $db= \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
 
-$adapter = new Local(__DIR__.'/localfiles');
+//$adapter = new Local(__DIR__.'/localfiles');
 $app->filesystem = new Filesystem($adapter);
 class Photo extends \atk4\data\Model {
     public $table = 'photos';
