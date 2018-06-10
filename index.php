@@ -15,4 +15,4 @@ $form->onSubmit(function ($form) {
 
 $gr = $seg2->addColumn()->add(['Grid', 'menu'=>false, 'paginator'=>false]);
 $gr->setModel(new \atk4\filestore\Model\File($db));
-$col->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()]));
+$seg2->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()]));
