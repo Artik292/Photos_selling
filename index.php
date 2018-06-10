@@ -6,7 +6,8 @@ $app->initLayout('Centered');
 use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
 
-$app->dbConnect('mysql://root:root@localhost/atk4');
+$db= \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
+
 $adapter = new Local(__DIR__.'/localfiles');
 $app->filesystem = new Filesystem($adapter);
 class Photo extends \atk4\data\Model {
