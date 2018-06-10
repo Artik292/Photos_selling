@@ -14,7 +14,8 @@ class Photo extends \atk4\data\Model {
     public $table = 'photos';
     function init() {
         parent::init();
-        $this->addField('name'); // friend's name
+        $this->addField('name');
+        $this->addField('file_id');
         $this->addField('file', new \atk4\filestore\Field\File($this->app->filesystem));
         $this->addField('file2', new \atk4\filestore\Field\File($this->app->filesystem));
     }
