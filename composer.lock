@@ -1,0 +1,470 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b877d36418d5941ddd5c67102c67693b",
+    "packages": [
+        {
+            "name": "atk4/core",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/core.git",
+                "reference": "00d1d33f62105292fe36b5bc0175b429154ec165"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/core/zipball/00d1d33f62105292fe36b5bc0175b429154ec165",
+                "reference": "00d1d33f62105292fe36b5bc0175b429154ec165",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "*",
+                "phpunit/phpunit": "~5.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "atk4\\core\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Agile Core - collection of PHP Traits for designing object-oriented frameworks",
+            "homepage": "https://github.com/atk4/core",
+            "keywords": [
+                "Agile Toolkit",
+                "framework",
+                "php",
+                "trains"
+            ],
+            "time": "2018-04-19T17:56:07+00:00"
+        },
+        {
+            "name": "atk4/data",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/data.git",
+                "reference": "5f85db066a40a5739cf3772b47e0631638651f85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/data/zipball/5f85db066a40a5739cf3772b47e0631638651f85",
+                "reference": "5f85db066a40a5739cf3772b47e0631638651f85",
+                "shasum": ""
+            },
+            "require": {
+                "atk4/core": "dev-develop",
+                "atk4/dsql": "dev-develop",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "atk4/schema": "dev-develop",
+                "codeclimate/php-test-reporter": "*",
+                "phpunit/phpunit": "<6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "atk4\\data\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Agile Data - Database access abstraction framework",
+            "homepage": "https://github.com/atk4/data",
+            "keywords": [
+                "Active Record",
+                "builder",
+                "framework",
+                "mongodb",
+                "mysql",
+                "nosql",
+                "orm",
+                "postgresql",
+                "query",
+                "sql"
+            ],
+            "time": "2018-05-15T14:21:38+00:00"
+        },
+        {
+            "name": "atk4/dsql",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/dsql.git",
+                "reference": "cbf9fa5ceccb282fce97046f23f4c1884311ab43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/dsql/zipball/cbf9fa5ceccb282fce97046f23f4c1884311ab43",
+                "reference": "cbf9fa5ceccb282fce97046f23f4c1884311ab43",
+                "shasum": ""
+            },
+            "require": {
+                "atk4/core": "dev-develop",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "*",
+                "phpunit/dbunit": ">=1.2",
+                "phpunit/phpcov": "*",
+                "phpunit/phpunit": "<6"
+            },
+            "suggest": {
+                "jdorn/sql-formatter": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "atk4\\dsql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Dynamic SQL Builder in PHP",
+            "homepage": "http://agiletoolkit.org/",
+            "keywords": [
+                "builder",
+                "framework",
+                "orm",
+                "sql"
+            ],
+            "time": "2018-05-14T09:43:38+00:00"
+        },
+        {
+            "name": "atk4/filestore",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/filestore.git",
+                "reference": "a3db99c93e14c6a6a3f8ff7f317690c4f10d1478"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/filestore/zipball/a3db99c93e14c6a6a3f8ff7f317690c4f10d1478",
+                "reference": "a3db99c93e14c6a6a3f8ff7f317690c4f10d1478",
+                "shasum": ""
+            },
+            "require": {
+                "atk4/ui": "*, dev-develop",
+                "league/flysystem": "^1.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "*",
+                "phpunit/phpunit": "<6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "atk4\\filestore\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Integration between ATK UI Form Upload Field and PHP Flysystem",
+            "homepage": "https://github.com/atk4/filestore",
+            "keywords": [
+                "Agile",
+                "Flysystem",
+                "agile ui",
+                "atk4",
+                "data",
+                "filestore",
+                "framework",
+                "image",
+                "upload"
+            ],
+            "time": "2018-04-01T14:52:45+00:00"
+        },
+        {
+            "name": "atk4/ui",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/ui.git",
+                "reference": "cc6e3e35ec34dbe7a0b1c5053ec6482eeee34c41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/cc6e3e35ec34dbe7a0b1c5053ec6482eeee34c41",
+                "reference": "cc6e3e35ec34dbe7a0b1c5053ec6482eeee34c41",
+                "shasum": ""
+            },
+            "require": {
+                "atk4/core": "dev-develop",
+                "atk4/data": "dev-develop",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.4",
+                "behat/mink-extension": "^2.2",
+                "behat/mink-zombie-driver": "^1.4",
+                "codeclimate/php-test-reporter": "*",
+                "fzaninotto/faker": "*",
+                "phpunit/phpcov": "^3.0",
+                "phpunit/phpunit": "<6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "atk4\\ui\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Agile UI - Web Component Framework written in PHP",
+            "homepage": "https://agiletoolkit.org/ui",
+            "keywords": [
+                "button",
+                "component",
+                "crud",
+                "form",
+                "framework",
+                "gadget",
+                "grid",
+                "render",
+                "ui",
+                "web",
+                "widget"
+            ],
+            "time": "2018-06-07T13:24:00+00:00"
+        },
+        {
+            "name": "h4cc/wkhtmltopdf-i386",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h4cc/wkhtmltopdf-i386.git",
+                "reference": "da14486ec8eba1873b026b56126ed02d2f2ae5e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h4cc/wkhtmltopdf-i386/zipball/da14486ec8eba1873b026b56126ed02d2f2ae5e3",
+                "reference": "da14486ec8eba1873b026b56126ed02d2f2ae5e3",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/wkhtmltopdf-i386"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Beckmann",
+                    "email": "github@h4cc.de"
+                }
+            ],
+            "description": "Convert html to pdf using webkit (qtwebkit). Static linked linux binary for i386 systems.",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "pdf",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltopdf"
+            ],
+            "time": "2018-01-15T07:18:15+00:00"
+        },
+        {
+            "name": "league/flysystem",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "b74cabbe961552e958d42e291800ac578d2c2982"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/b74cabbe961552e958d42e291800ac578d2c2982",
+                "reference": "b74cabbe961552e958d42e291800ac578d2c2982",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "league/flysystem-sftp": "<1.0.6"
+            },
+            "require-dev": {
+                "ext-fileinfo": "*",
+                "phpspec/phpspec": "^3.4",
+                "phpunit/phpunit": "^5.7"
+            },
+            "suggest": {
+                "ext-fileinfo": "Required for MimeType",
+                "ext-ftp": "Allows you to use FTP server storage",
+                "ext-openssl": "Allows you to use FTPS server storage",
+                "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
+                "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
+                "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
+                "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
+                "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
+                "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
+                "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
+                "league/flysystem-webdav": "Allows you to use WebDAV storage",
+                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
+                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
+                "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Filesystem abstraction: Many filesystems, one API.",
+            "keywords": [
+                "Cloud Files",
+                "WebDAV",
+                "abstraction",
+                "aws",
+                "cloud",
+                "copy.com",
+                "dropbox",
+                "file systems",
+                "files",
+                "filesystem",
+                "filesystems",
+                "ftp",
+                "rackspace",
+                "remote",
+                "s3",
+                "sftp",
+                "storage"
+            ],
+            "time": "2018-06-07T07:38:08+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2018-04-03T15:59:15+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "atk4/ui": 20,
+        "atk4/filestore": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
