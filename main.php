@@ -1,7 +1,7 @@
 <?php
-/*require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Photos');
-$app->initLayout('Centered');*/
+$app->initLayout('Centered');
 //$app->add[('Card','Hello word')];
 $stamp = ('https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png');
 $im =('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.jpg');
