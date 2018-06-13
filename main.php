@@ -12,7 +12,7 @@ $im =('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.
 
 $marge_right = 1;
 $marge_bottom = 1;
-echo getimagesize ($stamp);
+var_dump getimagesize ($stamp);
 $sx = imagesx($stamp);
 $sy = imagesy($stamp);
 
