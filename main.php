@@ -8,7 +8,7 @@ $im =('https://envato-shoebox-0.imgix.net/2a41/93b3-6f8b-4f1c-8767-cd9772b4ded7/
 echo 'work';
 //phpinfo();
 
-/*$marge_right = 1;
+$marge_right = 1;
 $marge_bottom = 1;
 $sx = imagesx($stamp);
 $sy = imagesy($stamp);
@@ -18,4 +18,4 @@ imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $
 
 header('Content-type: image/png');
 imagepng($im);
-imagedestroy($im);*/
+imagedestroy($im);
