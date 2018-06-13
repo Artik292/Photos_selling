@@ -12,6 +12,7 @@ var_dump ($im);
 
 $marge_right = 1;
 $marge_bottom = 1;
+echo getimagesize ($stamp);
 $sx = imagesx($stamp);
 $sy = imagesy($stamp);
 
