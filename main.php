@@ -25,4 +25,4 @@ imagedestroy($im);
 
 $app->add(["Image",$res]);
 */
-gd_info();
+var_dump (gd_info());
