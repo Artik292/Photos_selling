@@ -1,5 +1,5 @@
 <?php
-require 'vendor/autoload.php';
+/*require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Photos');
 $app->initLayout('Centered');
 //$app->add[('Card','Hello word')];
@@ -24,3 +24,5 @@ imagepng($im);
 imagedestroy($im);
 
 $app->add(["Image",$res]);
+*/
+gd_info();
