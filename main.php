@@ -11,7 +11,7 @@ $app->add(["Image",$stamp]);
 
 $marge_right = 1;
 $marge_bottom = 1;
-$sx = imagesx($stamp);
+/*$sx = imagesx($stamp);
 $sy = imagesy($stamp);
 
 
@@ -19,4 +19,4 @@ imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $
 
 header('Content-type: image/png');
 imagepng($im);
-imagedestroy($im);
+imagedestroy($im);*/
