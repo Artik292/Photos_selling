@@ -5,8 +5,8 @@ $app->initLayout('Centered');
 //$app->add[('Card','Hello word')];
 $stamp = ('https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png');
 $im =('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.jpg');
-echo 'work';
-var_dump ($im);
+//echo 'work';
+//var_dump ($im);
 //$app->add(["Image",$stamp]);
 //phpinfo();
 
