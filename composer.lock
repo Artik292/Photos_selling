@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b877d36418d5941ddd5c67102c67693b",
+    "content-hash": "2cd83a963e8e053cc59ea1b5b46137bc",
     "packages": [
         {
             "name": "atk4/core",
@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/ui.git",
-                "reference": "cc6e3e35ec34dbe7a0b1c5053ec6482eeee34c41"
+                "reference": "fbc4093b81bd7ad7074bd910795668d5a60d40a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/cc6e3e35ec34dbe7a0b1c5053ec6482eeee34c41",
-                "reference": "cc6e3e35ec34dbe7a0b1c5053ec6482eeee34c41",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/fbc4093b81bd7ad7074bd910795668d5a60d40a6",
+                "reference": "fbc4093b81bd7ad7074bd910795668d5a60d40a6",
                 "shasum": ""
             },
             "require": {
@@ -282,7 +282,7 @@
                 "web",
                 "widget"
             ],
-            "time": "2018-06-07T13:24:00+00:00"
+            "time": "2018-06-12T10:53:00+00:00"
         },
         {
             "name": "h4cc/wkhtmltopdf-i386",
@@ -465,6 +465,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-gd": "*"
+    },
     "platform-dev": []
 }
