@@ -1,5 +1,5 @@
 <?php
-/*require 'vendor/autoload.php';
+require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Photos');
 $app->initLayout('Centered');
 //$app->add[('Card','Hello word')];
@@ -9,20 +9,15 @@ $im =('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.
 //var_dump ($im);
 //$app->add(["Image",$stamp]);
 //phpinfo();
+$marge_right = 10;
+$marge_bottom = 10;
+$sx = imagesx($stamp);
+$sy = imagesy($stamp);
 
-$marge_right = 1;
-$marge_bottom = 1;
-$size = (getimagesize ($stamp));
-$sx = $size["width"];
-$sy = $size["height"];
-
-
-$res = imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
 
 header('Content-type: image/png');
 imagepng($im);
 imagedestroy($im);
 
 $app->add(["Image",$res]);
-*/
-var_dump (gd_info());
