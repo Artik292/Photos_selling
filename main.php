@@ -20,4 +20,4 @@ $res = imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - 
 //imagepng($im);
 //imagedestroy($im);
 
-$app->add(["Image",$res]);
+$app->add(["Image",$im]);
