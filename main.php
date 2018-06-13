@@ -9,15 +9,15 @@ $im =('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.
 //var_dump ($im);
 //$app->add(["Image",$stamp]);
 //phpinfo();
-$marge_right = 10;
-$marge_bottom = 10;
+$marge_right = 1;
+$marge_bottom = 1;
 $sx = imagesx($stamp);
 $sy = imagesy($stamp);
 
-$res = imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
 
 header('Content-type: image/png');
-//imagepng($im);
-//imagedestroy($im);
+imagepng($im);
+imagedestroy($im);
 
 //$app->add(["Image",$im]);
