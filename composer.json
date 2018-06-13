@@ -7,8 +7,8 @@
     },
   "require":{
     "atk4/ui": "*, dev-develop",
-
-        "h4cc/wkhtmltopdf-i386": "*",
-            "atk4/filestore": "dev-master"
+    "ext-gd":"*",
+    "h4cc/wkhtmltopdf-i386": "*",
+    "atk4/filestore": "dev-master"
   }
 }
