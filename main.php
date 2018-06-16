@@ -21,8 +21,8 @@ $pleasework = imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy(
 header('Content-type: image/png');
 imagepng($im); */
 /*$app->add(["Image",$im,"large"]);
-$app->add(["Image",$stamp,"large"]);
-$app->add(["Image",$pleasework,"large"]);*/
+$app->add(["Image",$stamp,"large"]);*/
+$app->add(["Image",$pleasework,"large"]);
 
 //imagedestroy($im);
 
