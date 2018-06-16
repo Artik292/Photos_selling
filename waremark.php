@@ -1,12 +1,8 @@
 <?php
-require 'vendor/autoload.php';
-$app = new \atk4\ui\App('Photos');
-$app->initLayout('Centered');
-//$app->add[('Card','Hello word')];
-$stamp = imagecreatefrompng('https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png');
-$im = imagecreatefromjpeg('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.jpg');
-$im1 = ('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.jpg');
-$app->add(["Image",$im1]);
+session_start();
+$stamp = ($_SESSION["PNG"]);
+$im = ($_SESSION["JPEG"]);
+//$im1 = ('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.jpg');
 //echo 'work';
 //var_dump ($im);
 //$app->add(["Image",$stamp]);
