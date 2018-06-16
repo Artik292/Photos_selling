@@ -1,7 +1,7 @@
 <?php
 session_start();
-$stamp = ($_SESSION["PNG"]);
-$im = ($_SESSION["JPEG"]);
+$stamp = imagecreatefrompng($_SESSION["PNG"]);
+$im = imagecreatefromjpeg($_SESSION["JPEG"]);
 //$im1 = ('https://upload.wikimedia.org/wikipedia/commons/7/72/Pleiades_Spitzer_big.jpg');
 //echo 'work';
 //var_dump ($im);
