@@ -22,6 +22,6 @@ imagepng($im);
 $app->add(["Image",$stamp,"large"]);
 $app->add(["Image",$pleasework,"large"]);*/
 
-imagedestroy($im);
+//imagedestroy($im);
 
 //$app->add(["Image",$im]);
