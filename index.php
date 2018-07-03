@@ -3,10 +3,10 @@ require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Загрузить фотографии');
 $app->initLayout('Centered');
 
-use League\Flysystem\Filesystem;
+/*use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
 
-$db= \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
+//$db= \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
 
 $adapter = new Local(__DIR__.'/localfiles');
 $app->filesystem = new Filesystem($adapter);
@@ -26,4 +26,5 @@ $form->setModel(new Photo($db));
 $form->model->tryLoad(1);
 $gr = $col->addColumn()->add(['Grid', 'menu'=>false, 'paginator'=>false]);
 $gr->setModel(new \atk4\filestore\Model\File($db));
-$col->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()]));
+$col->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()])); */
+Header('Location: main.php');
