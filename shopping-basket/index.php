@@ -10,7 +10,7 @@ $label = $app->add(['Label',$_SESSION['a']]);
 
 $app->add(['Button','+','massive green'])
   ->on('click',  function() use($app,$label) {
-    $_SESSION['a']++;
+    $_SESSION['a'] = $_SESSION['a']+1;
     $label->set($_SESSION['a']);
     return new \atk4\ui\jsReload($label);
   });
