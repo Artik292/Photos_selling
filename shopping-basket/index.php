@@ -63,8 +63,9 @@ foreach ($photo as $p) {
         break;
 }
       $image->load('photos/'.$p['photo_id'].'.jpg');
-      $image->resize(400, 200);
+      $image->resize(440, 333);
       $image->save('photos/'.$p['photo_id'].'s.jpg');
+      mark('photos/'.$p['photo_id'].'s.jpg');
       $view->add(['Image','photos/'.$p['photo_id'].'s.jpg','small']);
       If ((($p['value']*10) % 10) == 0) {
           $B = $view->add(['Button',$p['value'].' €','massive green tag']);
@@ -84,3 +85,11 @@ $app->add(['Button','Reset'])->on('click', function($app) {
 $_SESSION['sum'] = 0;
 return new \atk4\ui\jsExpression('document.location = "index.php" ');
 });
+
+/*$app->add(['Button','Do watermark'])->on('click', function($app) {
+  $image = new SimpleImage();
+  $image->load('photos/w.png');
+  //$image->scale(100);         Can't do it with PNG
+  $image->save('photos/wat.png');
+return new \atk4\ui\jsExpression('document.location = "index.php" ');
+}); */

@@ -90,3 +90,35 @@ class SimpleImage {
       $this->image = $new_image;
    }
 }
+
+/**
+ * Making watermark
+ */
+  function mark($photo)
+  {
+    $stamp = imagecreatefrompng('photos/w.png');
+    $im = imagecreatefromjpeg($photo);
+    $sx = imagesx($stamp);
+    $sy = imagesy($stamp);
+    $pleasework = imagecopy($im, $stamp, 0, 0, 0, 0, imagesx($stamp), imagesy($stamp));
+    //header('Content-type: image/png');
+    imagepng($im,$photo);
+    //imagedestroy($im);
+  }
+
+/*
+
+{
+  $stamp = imagecreatefrompng('photos/watermark.png');
+  $im = imagecreatefromjpeg($photo);
+  $marge_right = 1;
+  $marge_bottom = 1;
+  $sx = imagesx($stamp);
+  $sy = imagesy($stamp);
+  $pleasework = imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
+  header('Content-type: image/png');
+  imagepng($im);
+  imagedestroy($im);
+}
+
+*/
