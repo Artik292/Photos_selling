@@ -12,7 +12,7 @@ for ($n=0; $n < 1000; $n++) {
     if (isset($_SESSION[$n.'_count'])) {
       $p = new Photo($db);
       $p->load($n);
-      $app->add(['Label',$_SESSION[$n.'_count'],'big fluid','image'=>'photos/'.$p['photo_id'].'.jpg']);
+      $app->add(['Label',$_SESSION[$n.'_count'],'big fluid','image'=>'photos/'.$p['photo_id'].'s.jpg']);
     }
 }
 
