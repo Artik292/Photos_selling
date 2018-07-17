@@ -5,8 +5,11 @@ if (!(isset($_SESSION['sum']))) {
 }
 require 'con.php';
 
+//echo $_SESSION['sum'];
+
 $app = new \atk4\ui\App('Тест корзины');
 $app->initLayout('Centered');
+
 
 //////////////////////////////FOR CONNECTION////////////////////////////////
 
@@ -16,7 +19,12 @@ $app->initLayout('Centered');
 
 $app->add(['CRUD'])->setModel(new Photo($db));
 
-$Button = $app->add(['Button',$_SESSION['sum']])->link(['basket']);
+If ((($_SESSION['sum']*10) % 10) == 0) {
+    $Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
+} else {
+    $Button = $app->add(['Label',$_SESSION['sum'].'0 €','big red right ribbon','icon'=>'shopping cart']);
+}
+$Button->link(['basket']);
 
 $photo = new Photo($db);
 
@@ -34,6 +42,7 @@ $app->add(['ui'=>'hidden divider']);
 //$app->add(['Card'])->setModel((new Photo($db))->tryLoadAny());
 
 $i=1;
+$image = new SimpleImage();
 
 foreach ($photo as $p) {
   switch ($i) {
@@ -53,8 +62,15 @@ foreach ($photo as $p) {
         $c3->add(['ui'=>'hidden divider']);
         break;
 }
-      $view->add(['Image','photos/'.$p['photo_id'].'.jpg','small']);
-      $B = $view->add(['Button',$p['value'],'massive green tag']);
+      $image->load('photos/'.$p['photo_id'].'.jpg');
+      $image->resize(400, 200);
+      $image->save('photos/'.$p['photo_id'].'s.jpg');
+      $view->add(['Image','photos/'.$p['photo_id'].'s.jpg','small']);
+      If ((($p['value']*10) % 10) == 0) {
+          $B = $view->add(['Button',$p['value'].' €','massive green tag']);
+      } else {
+          $B = $view->add(['Button',$p['value'].'0 €','massive green tag']);
+      }
       $B->on('click',  function() use($app,$Button,$p) {
       $_SESSION['sum'] = $_SESSION['sum']+$p['value'];
       $Button->set($_SESSION['sum']);
@@ -63,3 +79,8 @@ foreach ($photo as $p) {
       return new \atk4\ui\jsExpression('document.location = "index.php" ');
     });
 }
+
+$app->add(['Button','Reset'])->on('click', function($app) {
+$_SESSION['sum'] = 0;
+return new \atk4\ui\jsExpression('document.location = "index.php" ');
+});
