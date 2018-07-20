@@ -2,6 +2,55 @@
 
 require '../vendor/autoload.php';
 
+session_start();
+
+class App extends \atk4\ui\App {
+    public $db;
+    function __construct() {
+        parent::__construct('Тест корзины');
+            $this->initLayout('Centered');
+            $this->layout->template->del('Header');
+            $logo = 'logo.png';
+            $this->layout->add(['Image',$logo,'small centered'],'Header');
+            //$this->layout->add(['Label','Work','red right'],'Header');
+            $this->layout->add([
+                'Header',
+                'Тест корзины',
+                'size'=>'huge',
+                'aligned' => 'center',
+            ], 'Header');
+       if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
+            $this->db = \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
+        } else {
+            $this->db = \atk4\data\Persistence::connect('mysql:host=localhost;dbname=photo_selling','root','');
+        }
+}
+            function mark($photo)
+            {
+              $image = new SimpleImage();
+              $image->load($photo);
+              $image->resize(440, 333);
+              $photo = substr_replace($photo, 's', -4, 0);
+              $image->save($photo);
+              $stamp = imagecreatefrompng('photos/w.png');
+              $im = imagecreatefromjpeg($photo);
+              $sx = imagesx($stamp);
+              $sy = imagesy($stamp);
+              $pleasework = imagecopy($im, $stamp, 0, 0, 0, 0, imagesx($stamp), imagesy($stamp));
+              imagepng($im,$photo);
+              imagedestroy($im);
+            }
+
+            function bask_add ($p)
+            {
+                If (isset($_SESSION[$p['id'].'_count'])) {
+                    $_SESSION[$p['id'].'_count']++;
+                } else {
+                    $_SESSION[$p['id'].'_count'] = 1;
+                }
+            }
+}
+
 class Photo extends \atk4\data\Model {
     public $table = 'photos';
     function init() {
@@ -10,20 +59,6 @@ class Photo extends \atk4\data\Model {
         $this->addField('value',['type'=>'money']);
         $this->addField('photo_id');
     }
-}
-
-function bask_add ($p) {
-    If (isset($_SESSION[$p['id'].'_count'])) {
-        $_SESSION[$p['id'].'_count']++;
-    } else {
-        $_SESSION[$p['id'].'_count'] = 1;
-    }
-}
-
-if (isset($_ENV['CLEARDB_DATABASE_URL'])){
-    $db = \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
-} else {
-    $db = \atk4\data\Persistence::connect('mysql:host=localhost;dbname=photo_selling','root','');
 }
 
 class SimpleImage {
@@ -91,34 +126,12 @@ class SimpleImage {
    }
 }
 
-/**
- * Making watermark
- */
-  function mark($photo)
-  {
-    $stamp = imagecreatefrompng('photos/w.png');
-    $im = imagecreatefromjpeg($photo);
-    $sx = imagesx($stamp);
-    $sy = imagesy($stamp);
-    $pleasework = imagecopy($im, $stamp, 0, 0, 0, 0, imagesx($stamp), imagesy($stamp));
-    //header('Content-type: image/png');
-    imagepng($im,$photo);
-    //imagedestroy($im);
-  }
+/*$rez = array(
+    '1'  => '1980x1920',
+    '2' => '1280x1024',
+    '3' => '1600x900',
+  ); */
 
-/*
-
-{
-  $stamp = imagecreatefrompng('photos/watermark.png');
-  $im = imagecreatefromjpeg($photo);
-  $marge_right = 1;
-  $marge_bottom = 1;
-  $sx = imagesx($stamp);
-  $sy = imagesy($stamp);
-  $pleasework = imagecopy($im, $stamp, imagesx($im) - $sx - $marge_right, imagesy($im) - $sy - $marge_bottom, 0, 0, imagesx($stamp), imagesy($stamp));
-  header('Content-type: image/png');
-  imagepng($im);
-  imagedestroy($im);
-}
-
-*/
+  $rez = array('1'=>array('rez'=>'1980x1920', 'value'=>'15'),
+               '2'=>array('rez'=>'1280x1024', 'value'=>'10'),
+               '3'=>array('rez'=>'1600x900', 'value'=>'5'));
