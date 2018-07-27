@@ -70,7 +70,7 @@ foreach ($photo as $p) {
         //return new \atk4\ui\jsExpression('document.location = "index.php" ');
         //return $Button->text($_SESSION['sum']);
         //return new \atk4\ui\jsReload($Button));
-        return new \atk4\ui\jsReload($Button, [], new \atk4\ui\jsExpression('console.log("Output with afterSuccess");'))
+        return new \atk4\ui\jsReload($Button, [], new \atk4\ui\jsExpression('console.log("Output with afterSuccess");'));
       });
       }
       /*If ((($p['value']*10) % 10) == 0) {
