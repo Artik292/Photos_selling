@@ -8,7 +8,7 @@ $app = new App();
 
 $app->add(['CRUD'])->setModel(new Photo($app->db));
 
-if ((($_SESSION['sum']*100) % 10) == 0) {
+/*if ((($_SESSION['sum']*100) % 10) == 0) {
     If ($_SESSION['sum'] == 0) {
     $Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
     } else {
@@ -16,7 +16,10 @@ if ((($_SESSION['sum']*100) % 10) == 0) {
     }
 } else {
     $Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
-}
+} */
+
+$Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
+
 $Button->link(['basket']);
 
 $photo = new Photo($app->db);
