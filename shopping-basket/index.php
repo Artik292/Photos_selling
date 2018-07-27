@@ -18,8 +18,8 @@ $app->add(['CRUD'])->setModel(new Photo($app->db));
     $Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
 } */
 
-//$Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
-$Button = $app->add(['Button',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
+$Button = $app->add(['Label',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
+//$Button = $app->add(['Button',$_SESSION['sum'].' €','big red right ribbon','icon'=>'shopping cart']);
 
 $Button->link(['basket']);
 
