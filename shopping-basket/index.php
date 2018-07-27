@@ -59,7 +59,7 @@ foreach ($photo as $p) {
       $m = $view->add('Menu');
       $sm = $m->addMenu('Sub-menu');
       foreach ($rez as $r) {
-        $sm->addItem($r['rez'].' '.$r['value'])->on('click',  function() use($app,$r) {
+        $sm->addItem($r['rez'].' '.$r['value'])->on('click',  function() use($app,$r,$Button) {
         $_SESSION['sum'] = $_SESSION['sum']+$r['value'];
         $Button->set($_SESSION['sum']);
         $app->bask_add($r['value']);
