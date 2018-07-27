@@ -64,10 +64,11 @@ foreach ($photo as $p) {
       foreach ($rez as $r) {
         $sm->addItem($r['rez'].' '.$r['value'])->on('click',  function() use($app,$r,$Button) {
         $_SESSION['sum'] = $_SESSION['sum']+$r['value'];
-        //$Button->set($_SESSION['sum']);
+        $Button->set($_SESSION['sum']);
         $app->bask_add($r['value']);
         //return new \atk4\ui\jsExpression('document.location = "index.php" ');
-        return $Button->text($_SESSION['sum']);
+        //return $Button->text($_SESSION['sum']);
+        return new \atk4\ui\jsReload($Button));
       });
       }
       /*If ((($p['value']*10) % 10) == 0) {
