@@ -67,8 +67,8 @@ foreach ($photo as $p) {
         $Button->set($_SESSION['sum']);
         $app->bask_add($r['value']);
         //return new \atk4\ui\jsExpression('document.location = "index.php" ');
-        //return $Button->text($_SESSION['sum']);
-        return new \atk4\ui\jsReload($Button));
+        return $Button->set($_SESSION['sum']);
+        //return new \atk4\ui\jsReload($Button));
       });
       }
       /*If ((($p['value']*10) % 10) == 0) {
