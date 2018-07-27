@@ -67,9 +67,9 @@ foreach ($photo as $p) {
         $_SESSION['sum'] = $_SESSION['sum']+$r['value'];
         $Button->set($_SESSION['sum']);
         $app->bask_add($r['value']);
-        //return new \atk4\ui\jsExpression('document.location = "index.php" ');
+        return new \atk4\ui\jsExpression('document.location = "index.php" ');
         //return $Button->text($_SESSION['sum']);
-        return new \atk4\ui\jsReload($Button));
+        //return new \atk4\ui\jsReload($Button));
       });
       }
       /*If ((($p['value']*10) % 10) == 0) {
@@ -89,3 +89,7 @@ $app->add(['Button','Reset'])->on('click', function($app) {
 $_SESSION['sum'] = 0;
 return new \atk4\ui\jsExpression('document.location = "index.php" ');
 });
+
+$app->add(['Header', 'Button reloading segment']);
+$v = $app->add(['View', 'ui' => 'segment'])->set((string) rand(1, 100));
+$app->add(['Button', 'Reload random number'])->js('click', new \atk4\ui\jsReload($v, [], new \atk4\ui\jsExpression('console.log("Output with afterSuccess");')));
