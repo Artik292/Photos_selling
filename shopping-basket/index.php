@@ -33,7 +33,6 @@ $c = $page->add(new \atk4\ui\Columns());
 $c1 = $c->addColumn();
 $c2 = $c->addColumn();
 $c3 = $c->addColumn();
-
 $app->add(['ui'=>'hidden divider']);
 
 $i=1;
@@ -90,7 +89,3 @@ $app->add(['Button','Reset'])->on('click', function($app) {
 $_SESSION['sum'] = 0;
 return new \atk4\ui\jsExpression('document.location = "index.php" ');
 });
-
-$app->add(['Header', 'Button reloading segment']);
-$v = $app->add(['View', 'ui' => 'segment'])->set((string) rand(1, 100));
-$app->add(['Button', 'Reload random number'])->js('click', new \atk4\ui\jsReload($v, [], new \atk4\ui\jsExpression('console.log("Output with afterSuccess");')));
