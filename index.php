@@ -1,6 +1,5 @@
 
 <?php
-
 require 'connection.php';
 
 
@@ -16,3 +15,5 @@ $form->onSubmit(function ($form) {
 $gr = $seg2->addColumn()->add(['Grid', 'menu'=>false, 'paginator'=>false]);
 $gr->setModel(new \atk4\filestore\Model\File($db));
 $seg2->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()]));
+$contents = $filesystem->read(__DIR__.'/Apps/Photo_sell/1.png');
+$seg2->add(['Image',$contents]);

@@ -9,6 +9,8 @@
     "atk4/ui": "*, dev-develop",
     "ext-gd":"*",
     "h4cc/wkhtmltopdf-i386": "*",
-    "atk4/filestore": "dev-master"
+    "atk4/filestore": "dev-master",
+            "spatie/flysystem-dropbox": "dev-master",
+            "league/flysystem": "^1.1@dev"
   }
 }
