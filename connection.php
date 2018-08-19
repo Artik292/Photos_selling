@@ -4,10 +4,14 @@ use League\Flysystem\Filesystem;
 use Spatie\Dropbox\Client;
 use Spatie\FlysystemDropbox\DropboxAdapter;
 
+
+//probably unnescessary
+/*
 $dropboxKey = 'h8kp65fi6e1zfyu';
 $dropboxSecret = 'qgf6057uertkyu0';
 $appName = 'Photo_sell';
 $appInfo = new Dropbox\AppInfo($dropboxKey,$dropboxSecret);
+*/
 
 $authorizationToken = '7EsFFAgrHOAAAAAAAAAAOnSdyMoGLWdsWTKB3ksIscSks8tOth6Fl8ruZrtI2B1x';
 $client = new Client($authorizationToken);
@@ -15,6 +19,9 @@ $client = new Client($authorizationToken);
 $adapter = new DropboxAdapter($client);
 
 $filesystem = new Filesystem($adapter);
+$path = _DIR_.'howtodefinepath';
+$contents = $filesystem->read($path);
+
 class Img extends \atk4\data\Model {
     public $table = 'test';
 
