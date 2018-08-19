@@ -8,6 +8,7 @@ $dropboxKey = 'h8kp65fi6e1zfyu';
 $dropboxSecret = 'qgf6057uertkyu0';
 $appName = 'Photo_sell';
 $appInfo = new Dropbox\AppInfo($dropboxKey,$dropboxSecret);
+
 $authorizationToken = '7EsFFAgrHOAAAAAAAAAAOnSdyMoGLWdsWTKB3ksIscSks8tOth6Fl8ruZrtI2B1x';
 $client = new Client($authorizationToken);
 
