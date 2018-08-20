@@ -32,6 +32,7 @@ switch ($id) {
   case 'user':
     $CRUD=$app->layout->add(['CRUD']);
     $CRUD->setModel(new photoselling\Model\user($db));
+    $CRUD->addQuickSearch(['name']);
   break;
   case 'order':
     $app->add(['CRUD'])->setModel(new photoselling\Model\order($db));
