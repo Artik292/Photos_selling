@@ -52,3 +52,7 @@ $app->add(['CRUD'])->setModel(new photoselling\Model\user($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\order($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\format($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\photo_order($db));
+
+$app->add(['ui'=>'divider']);
+
+$app->add(['Button','Admin','icon'=>'user'])->link('admin.php?id=user');
