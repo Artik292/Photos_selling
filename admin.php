@@ -30,7 +30,7 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
 
 switch ($id) {
   case 'user':
-    $CRUD=$app->add(['CRUD']);
+    $CRUD=$app->layout->add(['CRUD']);
     $CRUD->setModel(new photoselling\Model\user($db));
   break;
   case 'order':
