@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bee05b5fa1190dbf763b7ecdcb77789",
+    "content-hash": "f1a8ae4eada9f8d593ac6bc54e0a7ef7",
     "packages": [
         {
             "name": "atk4/core",
-            "version": "1.3.7",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/core.git",
-                "reference": "315796cec08f5843092bbdbb05549461c2732ede"
+                "reference": "00d1d33f62105292fe36b5bc0175b429154ec165"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/core/zipball/315796cec08f5843092bbdbb05549461c2732ede",
-                "reference": "315796cec08f5843092bbdbb05549461c2732ede",
+                "url": "https://api.github.com/repos/atk4/core/zipball/00d1d33f62105292fe36b5bc0175b429154ec165",
+                "reference": "00d1d33f62105292fe36b5bc0175b429154ec165",
                 "shasum": ""
             },
             "require": {
@@ -54,29 +54,29 @@
                 "php",
                 "trains"
             ],
-            "time": "2018-03-07T18:25:28+00:00"
+            "time": "2018-04-19 17:56:07"
         },
         {
             "name": "atk4/data",
-            "version": "1.3.1",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/data.git",
-                "reference": "b4f98dc5bf7f52ee4f9e52d8b27084a7602e0ed9"
+                "reference": "5f85db066a40a5739cf3772b47e0631638651f85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/data/zipball/b4f98dc5bf7f52ee4f9e52d8b27084a7602e0ed9",
-                "reference": "b4f98dc5bf7f52ee4f9e52d8b27084a7602e0ed9",
+                "url": "https://api.github.com/repos/atk4/data/zipball/5f85db066a40a5739cf3772b47e0631638651f85",
+                "reference": "5f85db066a40a5739cf3772b47e0631638651f85",
                 "shasum": ""
             },
             "require": {
-                "atk4/core": "^1.3",
-                "atk4/dsql": "^1.2",
+                "atk4/core": "dev-develop",
+                "atk4/dsql": "dev-develop",
                 "php": ">=5.6.0"
             },
             "require-dev": {
-                "atk4/schema": "*",
+                "atk4/schema": "dev-develop",
                 "codeclimate/php-test-reporter": "*",
                 "phpunit/phpunit": "<6"
             },
@@ -111,24 +111,24 @@
                 "query",
                 "sql"
             ],
-            "time": "2018-03-02T12:19:21+00:00"
+            "time": "2018-05-15 14:21:38"
         },
         {
             "name": "atk4/dsql",
-            "version": "1.2.1",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/dsql.git",
-                "reference": "f0544dae22c33e5581528add88bd8ee0a7034561"
+                "reference": "cbf9fa5ceccb282fce97046f23f4c1884311ab43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/dsql/zipball/f0544dae22c33e5581528add88bd8ee0a7034561",
-                "reference": "f0544dae22c33e5581528add88bd8ee0a7034561",
+                "url": "https://api.github.com/repos/atk4/dsql/zipball/cbf9fa5ceccb282fce97046f23f4c1884311ab43",
+                "reference": "cbf9fa5ceccb282fce97046f23f4c1884311ab43",
                 "shasum": ""
             },
             "require": {
-                "atk4/core": "^1.3",
+                "atk4/core": "dev-develop",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -165,25 +165,80 @@
                 "orm",
                 "sql"
             ],
-            "time": "2018-03-02T12:02:27+00:00"
+            "time": "2018-05-14 09:43:38"
         },
         {
-            "name": "atk4/ui",
-            "version": "1.4.4",
+            "name": "atk4/filestore",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/atk4/ui.git",
-                "reference": "314667e41a74bfb980f0726d24f88902360c42ab"
+                "url": "https://github.com/atk4/filestore.git",
+                "reference": "a3db99c93e14c6a6a3f8ff7f317690c4f10d1478"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/314667e41a74bfb980f0726d24f88902360c42ab",
-                "reference": "314667e41a74bfb980f0726d24f88902360c42ab",
+                "url": "https://api.github.com/repos/atk4/filestore/zipball/a3db99c93e14c6a6a3f8ff7f317690c4f10d1478",
+                "reference": "a3db99c93e14c6a6a3f8ff7f317690c4f10d1478",
                 "shasum": ""
             },
             "require": {
-                "atk4/core": "^1.3",
-                "atk4/data": "^1.3",
+                "atk4/ui": "*, dev-develop",
+                "league/flysystem": "^1.0",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "*",
+                "phpunit/phpunit": "<6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "atk4\\filestore\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romans Malinovskis",
+                    "email": "romans@agiletoolkit.org",
+                    "homepage": "https://nearly.guru/"
+                }
+            ],
+            "description": "Integration between ATK UI Form Upload Field and PHP Flysystem",
+            "homepage": "https://github.com/atk4/filestore",
+            "keywords": [
+                "Agile",
+                "Flysystem",
+                "agile ui",
+                "atk4",
+                "data",
+                "filestore",
+                "framework",
+                "image",
+                "upload"
+            ],
+            "time": "2018-04-01 14:52:45"
+        },
+        {
+            "name": "atk4/ui",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/atk4/ui.git",
+                "reference": "5182e1eb72bc8d34a53b79a4cef405930dbc2214"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/5182e1eb72bc8d34a53b79a4cef405930dbc2214",
+                "reference": "5182e1eb72bc8d34a53b79a4cef405930dbc2214",
+                "shasum": ""
+            },
+            "require": {
+                "atk4/core": "dev-develop",
+                "atk4/data": "dev-develop",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -227,20 +282,143 @@
                 "web",
                 "widget"
             ],
-            "time": "2018-03-08T13:51:33+00:00"
+            "time": "2018-07-03 10:06:51"
         },
         {
-            "name": "psr/log",
-            "version": "1.0.2",
+            "name": "dropbox/dropbox-sdk",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "url": "https://github.com/dropbox/dropbox-sdk-php.git",
+                "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/dropbox/dropbox-sdk-php/zipball/0f1a178ca9c0271bca6426dde8f5a2241578deae",
+                "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">= 5.3"
+            },
+            "require-dev": {
+                "apigen/apigen": "4.1.2",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "2.0.0RC3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Dropbox": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Dropbox SDK for PHP",
+            "keywords": [
+                "dropbox"
+            ],
+            "time": "2016-08-08T23:48:49+00:00"
+        },
+        {
+            "name": "league/flysystem",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem.git",
+                "reference": "611658dc9238501fcecb65ee9eadd31c285ecabe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/611658dc9238501fcecb65ee9eadd31c285ecabe",
+                "reference": "611658dc9238501fcecb65ee9eadd31c285ecabe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "conflict": {
+                "league/flysystem-sftp": "<1.0.6"
+            },
+            "require-dev": {
+                "ext-fileinfo": "*",
+                "phpspec/phpspec": "^3.4",
+                "phpunit/phpunit": "^5.7"
+            },
+            "suggest": {
+                "ext-fileinfo": "Required for MimeType",
+                "ext-ftp": "Allows you to use FTP server storage",
+                "ext-openssl": "Allows you to use FTPS server storage",
+                "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
+                "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
+                "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
+                "league/flysystem-cached-adapter": "Flysystem adapter decorator for metadata caching",
+                "league/flysystem-eventable-filesystem": "Allows you to use EventableFilesystem",
+                "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
+                "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
+                "league/flysystem-webdav": "Allows you to use WebDAV storage",
+                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
+                "spatie/flysystem-dropbox": "Allows you to use Dropbox storage",
+                "srmklive/flysystem-dropbox-v2": "Allows you to use Dropbox storage for PHP 5 applications"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Filesystem abstraction: Many filesystems, one API.",
+            "keywords": [
+                "Cloud Files",
+                "WebDAV",
+                "abstraction",
+                "aws",
+                "cloud",
+                "copy.com",
+                "dropbox",
+                "file systems",
+                "files",
+                "filesystem",
+                "filesystems",
+                "ftp",
+                "rackspace",
+                "remote",
+                "s3",
+                "sftp",
+                "storage"
+            ],
+            "time": "2018-06-27 17:55:51"
+        },
+        {
+            "name": "psr/log",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
+                "reference": "3490ba5925e6dcbe6de950c5c6b8dce9f6e96eda",
                 "shasum": ""
             },
             "require": {
@@ -274,15 +452,20 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-04-03 15:59:15"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "atk4/ui": 20,
+        "atk4/filestore": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-gd": "*"
+    },
     "platform-dev": []
 }
