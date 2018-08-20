@@ -1,5 +1,14 @@
 {
-    "require": {
-        "atk4/ui": "*"
-    }
+      "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "":"src/"
+        }
+    },
+  "require":{
+    "atk4/ui": "*, dev-develop",
+     "dropbox/dropbox-sdk": "1.1.*",
+    "atk4/filestore": "dev-master",
+    "ext-gd":"*"
+  }
 }
