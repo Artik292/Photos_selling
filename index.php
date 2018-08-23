@@ -45,13 +45,17 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
      $db = \atk4\data\Persistence::connect('mysql:host=127.0.0.1;dbname=Photo_selling','root','');
  }
 
-$app->add(['CRUD'])->setModel(new photoselling\Model\photographer($db));
+ require 'src/Gallery.php';
+
+ $app->add(new Gallery());
+
+/*$app->add(['CRUD'])->setModel(new photoselling\Model\photographer($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\event($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\photo($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\user($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\order($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\format($db));
-$app->add(['CRUD'])->setModel(new photoselling\Model\photo_order($db));
+$app->add(['CRUD'])->setModel(new photoselling\Model\photo_order($db)); */
 
 $app->add(['ui'=>'divider']);
 
