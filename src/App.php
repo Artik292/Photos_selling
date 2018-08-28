@@ -42,8 +42,8 @@ class App extends \atk4\ui\App
                 //$this->initLayout(new Narrow());
                 $this->initLayout('Centered');
                 $this->layout->template->del('Header');
-                $logo = 'https://images.ru.prom.st/528754_w0_h0_kran_bashennyj.png';
-                $this->layout->add(['Image',$logo,'small centered'],'Header');
+                $logo = 'logo.jpg';
+                //$this->layout->add(['Image',$logo,'small centered'],'Header');
                 //$this->layout->add(['Label','Work','red right'],'Header');
                 $this->layout->add([
                     'Header',
