@@ -3,13 +3,13 @@ require 'vendor/autoload.php';
 $app = new \atk4\ui\App('Загрузить фотографии');
 $app->initLayout('Admin');
 
-$app->layout->leftMenu->addItem(['Users','icon'=>'user circle'],['admin','id'=>'user']);
-$app->layout->leftMenu->addItem(['Order','icon'=>'user circle'],['admin','id'=>'order']);
-$app->layout->leftMenu->addItem(['Photographer','icon'=>'user circle'],['admin','id'=>'photographer']);
-$app->layout->leftMenu->addItem(['Event','icon'=>'user circle'],['admin','id'=>'event']);
-$app->layout->leftMenu->addItem(['Photo','icon'=>'user circle'],['admin','id'=>'photo']);
-$app->layout->leftMenu->addItem(['Format','icon'=>'user circle'],['admin','id'=>'format']);
-$app->layout->leftMenu->addItem(['Photo_order','icon'=>'user circle'],['admin','id'=>'photo-order']);
+$app->layout->leftMenu->addItem(['User','icon'=>'user outline'],['admin','id'=>'user']);
+$app->layout->leftMenu->addItem(['Order','icon'=>'clipboard list'],['admin','id'=>'order']);
+$app->layout->leftMenu->addItem(['Photographer','icon'=>'camera retro'],['admin','id'=>'photographer']);
+$app->layout->leftMenu->addItem(['Event','icon'=>'graduation cap'],['admin','id'=>'event']);
+$app->layout->leftMenu->addItem(['Photo','icon'=>'image'],['admin','id'=>'photo']);
+$app->layout->leftMenu->addItem(['Format','icon'=>'sliders horizontal'],['admin','id'=>'format']);
+$app->layout->leftMenu->addItem(['Photo order','icon'=>'list alternate outline'],['admin','id'=>'photo-order']);
 
 $id = $_GET['id'];
 
@@ -30,7 +30,9 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
 
 switch ($id) {
   case 'user':
-    $app->add(['CRUD'])->setModel(new photoselling\Model\user($db));
+    $model = new photoselling\Model\user($db);
+    $crud = $app->layout->add(['CRUD']);
+    $crud->setModel($model);
   break;
   case 'order':
     $app->add(['CRUD'])->setModel(new photoselling\Model\order($db));
