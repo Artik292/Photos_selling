@@ -51,14 +51,14 @@ class App extends \atk4\ui\App {
             }
 }
 
-class Photo extends \atk4\data\Model {
-    public $table = 'photos';
-    function init() {
-        parent::init();
-        $this->addField('date',['type'=>'date']);
-        $this->addField('value',['type'=>'money']);
-        $this->addField('photo_id');
-    }
+class Photo extends \atk4\data\Model {	
+    public $table = 'photos';	
+    function init() {	
+        parent::init();	
+        $this->addField('date',['type'=>'date']);	
+        $this->addField('value',['type'=>'money']);	
+        $this->addField('photo_id');	
+    }	
 }
 
 class SimpleImage {

@@ -13,6 +13,16 @@ require 'src/Model/photo_order.php';
 
 
 
+require 'src/Model/user.php';
+require 'src/Model/order.php';
+require 'src/Model/photographer.php';
+require 'src/Model/event.php';
+require 'src/Model/photo.php';
+require 'src/Model/format.php';
+require 'src/Model/photo_order.php';
+
+
+
 /*use League\Flysystem\Filesystem;
 use League\Flysystem\Adapter\Local;
 
@@ -39,6 +49,15 @@ $gr->setModel(new \atk4\filestore\Model\File($db));
 $col->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()])); */
 //Header('Location: main.php');
 
+<<<<<<< HEAD
+=======
+if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
+     $db = \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
+ } else {
+     $db = \atk4\data\Persistence::connect('mysql:host=127.0.0.1;dbname=Photo_selling','root','');
+ }
+
+>>>>>>> f8b10895eeafc5156800884021657eca416c9362
  require 'src/Gallery.php';
 
  $app->add(new Gallery());
