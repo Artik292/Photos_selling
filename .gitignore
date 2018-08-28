@@ -1,1 +1,4 @@
 vendor/
+*.jpg
+.gitignore
+.DS_Store
