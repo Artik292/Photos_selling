@@ -4,7 +4,7 @@ namespace photoselling;
 
 session_start();
 
-require '../vendor/autoload.php';
+require 'vendor/autoload.php';
 require 'narrow.php';
 
 class App extends \atk4\ui\App
