@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1a8ae4eada9f8d593ac6bc54e0a7ef7",
+    "content-hash": "4007da7093705e764048a4c8f420e2c0",
     "packages": [
         {
             "name": "atk4/core",
@@ -54,7 +54,7 @@
                 "php",
                 "trains"
             ],
-            "time": "2018-04-19 17:56:07"
+            "time": "2018-04-19T17:56:07+00:00"
         },
         {
             "name": "atk4/data",
@@ -62,17 +62,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/data.git",
-                "reference": "5f85db066a40a5739cf3772b47e0631638651f85"
+                "reference": "d12d17161442000241db753c870f49fb27656647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/data/zipball/5f85db066a40a5739cf3772b47e0631638651f85",
-                "reference": "5f85db066a40a5739cf3772b47e0631638651f85",
+                "url": "https://api.github.com/repos/atk4/data/zipball/d12d17161442000241db753c870f49fb27656647",
+                "reference": "d12d17161442000241db753c870f49fb27656647",
                 "shasum": ""
             },
             "require": {
                 "atk4/core": "dev-develop",
-                "atk4/dsql": "dev-develop",
+                "atk4/dsql": "dev-develop as 1.2.5",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -111,7 +111,7 @@
                 "query",
                 "sql"
             ],
-            "time": "2018-05-15 14:21:38"
+            "time": "2018-08-19T14:27:07+00:00"
         },
         {
             "name": "atk4/dsql",
@@ -119,12 +119,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/dsql.git",
-                "reference": "cbf9fa5ceccb282fce97046f23f4c1884311ab43"
+                "reference": "b1dd476cbea24f81535621ccd83d4091ca371948"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/dsql/zipball/cbf9fa5ceccb282fce97046f23f4c1884311ab43",
-                "reference": "cbf9fa5ceccb282fce97046f23f4c1884311ab43",
+                "url": "https://api.github.com/repos/atk4/dsql/zipball/b1dd476cbea24f81535621ccd83d4091ca371948",
+                "reference": "b1dd476cbea24f81535621ccd83d4091ca371948",
                 "shasum": ""
             },
             "require": {
@@ -165,7 +165,7 @@
                 "orm",
                 "sql"
             ],
-            "time": "2018-05-14 09:43:38"
+            "time": "2018-08-16T07:47:00+00:00"
         },
         {
             "name": "atk4/filestore",
@@ -173,16 +173,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/filestore.git",
-                "reference": "a3db99c93e14c6a6a3f8ff7f317690c4f10d1478"
+                "reference": "6467d1c5950b24fa0913e17850ac6123d25986c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/filestore/zipball/a3db99c93e14c6a6a3f8ff7f317690c4f10d1478",
-                "reference": "a3db99c93e14c6a6a3f8ff7f317690c4f10d1478",
+                "url": "https://api.github.com/repos/atk4/filestore/zipball/6467d1c5950b24fa0913e17850ac6123d25986c8",
+                "reference": "6467d1c5950b24fa0913e17850ac6123d25986c8",
                 "shasum": ""
             },
             "require": {
-                "atk4/ui": "*, dev-develop",
+                "atk4/ui": "*",
                 "league/flysystem": "^1.0",
                 "php": ">=5.6.0"
             },
@@ -220,7 +220,7 @@
                 "image",
                 "upload"
             ],
-            "time": "2018-04-01 14:52:45"
+            "time": "2018-08-13T12:28:37+00:00"
         },
         {
             "name": "atk4/ui",
@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/ui.git",
-                "reference": "5182e1eb72bc8d34a53b79a4cef405930dbc2214"
+                "reference": "1eb3ac18af8a0209d96dc6200e20a26d7afce0c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/5182e1eb72bc8d34a53b79a4cef405930dbc2214",
-                "reference": "5182e1eb72bc8d34a53b79a4cef405930dbc2214",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/1eb3ac18af8a0209d96dc6200e20a26d7afce0c5",
+                "reference": "1eb3ac18af8a0209d96dc6200e20a26d7afce0c5",
                 "shasum": ""
             },
             "require": {
@@ -282,46 +282,7 @@
                 "web",
                 "widget"
             ],
-            "time": "2018-07-03 10:06:51"
-        },
-        {
-            "name": "dropbox/dropbox-sdk",
-            "version": "v1.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dropbox/dropbox-sdk-php.git",
-                "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dropbox/dropbox-sdk-php/zipball/0f1a178ca9c0271bca6426dde8f5a2241578deae",
-                "reference": "0f1a178ca9c0271bca6426dde8f5a2241578deae",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">= 5.3"
-            },
-            "require-dev": {
-                "apigen/apigen": "4.1.2",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "2.0.0RC3"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Dropbox": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Dropbox SDK for PHP",
-            "keywords": [
-                "dropbox"
-            ],
-            "time": "2016-08-08T23:48:49+00:00"
+            "time": "2018-08-16T08:20:49+00:00"
         },
         {
             "name": "league/flysystem",
@@ -329,12 +290,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "611658dc9238501fcecb65ee9eadd31c285ecabe"
+                "reference": "40666db471fa9ed3e70e46e2cd0e71579c3660b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/611658dc9238501fcecb65ee9eadd31c285ecabe",
-                "reference": "611658dc9238501fcecb65ee9eadd31c285ecabe",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/40666db471fa9ed3e70e46e2cd0e71579c3660b2",
+                "reference": "40666db471fa9ed3e70e46e2cd0e71579c3660b2",
                 "shasum": ""
             },
             "require": {
@@ -346,7 +307,7 @@
             "require-dev": {
                 "ext-fileinfo": "*",
                 "phpspec/phpspec": "^3.4",
-                "phpunit/phpunit": "^5.7"
+                "phpunit/phpunit": "^5.7.10"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -405,7 +366,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-06-27 17:55:51"
+            "time": "2018-08-14T09:10:53+00:00"
         },
         {
             "name": "psr/log",
@@ -452,7 +413,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-04-03 15:59:15"
+            "time": "2018-04-03T15:59:15+00:00"
         }
     ],
     "packages-dev": [],
