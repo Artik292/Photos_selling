@@ -62,12 +62,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/data.git",
-                "reference": "d12d17161442000241db753c870f49fb27656647"
+                "reference": "e5b6d9e1512b3f523c5c451a3c9000ab23bb7064"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/data/zipball/d12d17161442000241db753c870f49fb27656647",
-                "reference": "d12d17161442000241db753c870f49fb27656647",
+                "url": "https://api.github.com/repos/atk4/data/zipball/e5b6d9e1512b3f523c5c451a3c9000ab23bb7064",
+                "reference": "e5b6d9e1512b3f523c5c451a3c9000ab23bb7064",
                 "shasum": ""
             },
             "require": {
@@ -111,7 +111,7 @@
                 "query",
                 "sql"
             ],
-            "time": "2018-08-19T14:27:07+00:00"
+            "time": "2018-08-27T11:24:25+00:00"
         },
         {
             "name": "atk4/dsql",
@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/atk4/ui.git",
-                "reference": "1eb3ac18af8a0209d96dc6200e20a26d7afce0c5"
+                "reference": "56942671ef542b79624579670ff9fdef95c103b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/atk4/ui/zipball/1eb3ac18af8a0209d96dc6200e20a26d7afce0c5",
-                "reference": "1eb3ac18af8a0209d96dc6200e20a26d7afce0c5",
+                "url": "https://api.github.com/repos/atk4/ui/zipball/56942671ef542b79624579670ff9fdef95c103b0",
+                "reference": "56942671ef542b79624579670ff9fdef95c103b0",
                 "shasum": ""
             },
             "require": {
@@ -282,7 +282,7 @@
                 "web",
                 "widget"
             ],
-            "time": "2018-08-16T08:20:49+00:00"
+            "time": "2018-08-27T11:47:40+00:00"
         },
         {
             "name": "league/flysystem",
@@ -290,12 +290,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "40666db471fa9ed3e70e46e2cd0e71579c3660b2"
+                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/40666db471fa9ed3e70e46e2cd0e71579c3660b2",
-                "reference": "40666db471fa9ed3e70e46e2cd0e71579c3660b2",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
+                "reference": "f3e0d925c18b92cf3ce84ea5cc58d62a1762a2b2",
                 "shasum": ""
             },
             "require": {
@@ -366,7 +366,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2018-08-14T09:10:53+00:00"
+            "time": "2018-08-22T07:45:22+00:00"
         },
         {
             "name": "psr/log",
