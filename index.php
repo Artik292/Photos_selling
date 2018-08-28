@@ -1,7 +1,7 @@
 <?php
-require 'vendor/autoload.php';
-$app = new \atk4\ui\App('Загрузить фотографии');
-$app->initLayout('Centered');
+require 'src/App.php';
+$app = new \photoselling\App('centered');
+//$app->initLayout('Centered');
 
 require 'src/Model/user.php';
 require 'src/Model/order.php';
@@ -39,19 +39,17 @@ $gr->setModel(new \atk4\filestore\Model\File($db));
 $col->js(true, new \atk4\ui\jsExpression('setInterval(function() { []; }, 2000)', [$gr->jsReload()])); */
 //Header('Location: main.php');
 
-if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
-     $db = \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
- } else {
-     $db = \atk4\data\Persistence::connect('mysql:host=127.0.0.1;dbname=Photo_selling','root','');
- }
+ require 'src/Gallery.php';
 
-$app->add(['CRUD'])->setModel(new photoselling\Model\photographer($db));
+ $app->add(new Gallery());
+
+/*$app->add(['CRUD'])->setModel(new photoselling\Model\photographer($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\event($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\photo($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\user($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\order($db));
 $app->add(['CRUD'])->setModel(new photoselling\Model\format($db));
-$app->add(['CRUD'])->setModel(new photoselling\Model\photo_order($db));
+$app->add(['CRUD'])->setModel(new photoselling\Model\photo_order($db)); */
 
 $app->add(['ui'=>'divider']);
 
