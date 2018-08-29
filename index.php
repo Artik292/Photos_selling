@@ -37,7 +37,35 @@ if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
 
  require 'src/Gallery.php';
 
- $app->add(new Gallery());
+ //$app->add(new Gallery);
+
+
+/* NEW TRY */
+
+require 'look.html';
+
+ $photos = [
+    "1" => "https://pp.userapi.com/c844418/v844418511/db7be/Emj5fhWQ4og.jpg",
+    "2" => "https://pp.userapi.com/c844418/v844418511/db7c5/djTaHYnMrS8.jpg",
+    "3" => "https://pp.userapi.com/c844418/v844418511/db7cd/_4buQDuRMF0.jpg",
+    "4" => "https://pp.userapi.com/c844418/v844418511/db7d5/GixwMggfCUY.jpg",
+    "5" => "https://pp.userapi.com/c844418/v844418511/db7dd/Lo09ruxV_X0.jpg",  // place for DropBox
+    "6" => "https://pp.userapi.com/c844418/v844418511/db7e4/XZleg-4kGsc.jpg",
+    "7" => "https://pp.userapi.com/c844418/v844418511/db7eb/x57AX8EqlcA.jpg",
+    "8" => "https://pp.userapi.com/c844418/v844418511/db7f2/nKQ8YBaM444.jpg",
+    "9" => "https://pp.userapi.com/c844418/v844418511/db7f9/gwaf6zcDquo.jpg",
+    "10"=> "https://pp.userapi.com/c844418/v844418511/db800/68QFgFpM8uA.jpg"
+];
+
+foreach ($photos as $photo) {
+  $app->add(new Gallery());
+  $_SESSION['photo_image'] = $photo;
+  $_SESSION['photo_link'] = $photo;
+}
+
+
+/* END OF NEW TRY*/
+
 
 /*
 require 'src/Model/user.php';
