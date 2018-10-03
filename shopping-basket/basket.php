@@ -3,7 +3,7 @@ session_start();
 if (!(isset($_SESSION['sum']))) {
     $_SESSION['sum'] = 0;
 }
-require 'con.php';
+require 'console.php';
 
 $app = new \atk4\ui\App('Тест корзины');
 $app->initLayout('Centered');
