@@ -1,5 +1,5 @@
 <?php
-require 'con.php';
+require 'console.php';
 if (!(isset($_SESSION['sum']))) {
     $_SESSION['sum'] = 0;
 }
