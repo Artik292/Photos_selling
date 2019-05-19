@@ -19,13 +19,13 @@ class App extends \atk4\ui\App
         //include '../config.php';
 
         date_default_timezone_set('UTC');
-        if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
+        /*if (isset($_ENV['CLEARDB_DATABASE_URL'])) {
              $this->db = \atk4\data\Persistence::connect($_ENV['CLEARDB_DATABASE_URL']);
          } else {
              //$this->db = \atk4\data\Persistence::connect('mysql:host=localhost;dbname=photo_selling','root','');
              $this->db = \atk4\data\Persistence::connect('mysql:host=127.0.0.1;dbname=Photo_selling','root','');
 
-         }
+         }*/
         switch ($interface) {
             case 'admin':
                 $this->initLayout('Admin');

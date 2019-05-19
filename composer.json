@@ -1,13 +1,6 @@
 {
-      "minimum-stability": "dev",
-    "autoload": {
-        "psr-4": {
-            "":"src/"
-        }
-    },
   "require":{
-    "atk4/ui": "*, dev-develop",
-    "atk4/filestore": "dev-master",
+    "atk4/ui": "*",
     "ext-gd":"*"
   }
 }

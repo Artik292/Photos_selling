@@ -9,8 +9,8 @@ class Gallery extends \atk4\ui\View
     {
         parent::init();
         //parent::__construct();
-        $this->template['photo'] = $_SESSION['photo_image'];
-        $this->template['link'] = $_SESSION['photo_link'];
+        //$this->template['photo'] = $_SESSION['photo_image'];
+        //$this->template['link'] = $_SESSION['photo_link'];
 
         /*$this->template['photo1'] = 'https://tiles.trulia.com/tiles/median_age/9/135/196.png';
         $this->template['photo2'] = 'https://tiles.trulia.com/tiles/home_prices_listings/9/102/196.png';
@@ -18,5 +18,10 @@ class Gallery extends \atk4\ui\View
         $this->template['photo4'] = 'https://tiles.trulia.com/tiles/home_prices_listings/9/102/196.png';
         $this->template['photo5'] = 'https://tiles.trulia.com/tiles/median_age/9/135/196.png';
         $this->template['photo6'] = 'https://tiles.trulia.com/tiles/home_prices_listings/9/102/196.png'; */
+    }
+    function add($photo)
+    {
+      $this->template['photo'] = $photo;
+      //$this->template['link'] = $photo;
     }
 }
