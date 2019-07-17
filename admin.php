@@ -11,6 +11,18 @@ $id = $_GET['id'];
  require 'src/Model/photo.php';
  require 'src/Model/format.php';
  require 'src/Model/photo_order.php';
+ /*
+
+
+
+TEST FOT PULL REQUEST
+
+new line
+
+
+
+
+ */
 
 switch ($id) {
   case 'user':
